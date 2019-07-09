@@ -1,6 +1,6 @@
 <section>
-  <article *ngFor="let g of galerieServ.images">
-    <img [src]="g.src" alt="g.alt" />
+  <article *ngFor="let g of galerieServ.images; let i=index">
+    <a href [routerLink]="['edition', i]"><img [src]="g.src" alt="g.alt" /></a>
     <legend>{{ g.legend }}</legend>
   </article>
 </section>

@@ -1,0 +1,6 @@
+section{
+    flex-flow:column wrap;
+}
+header, article{
+    margin:auto;
+}

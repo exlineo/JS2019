@@ -1,0 +1,21 @@
+<header>
+    <h2>Editer un élément de la galerie</h2>
+</header>
+
+<section>
+  
+  <select (change)="setImage()" [(ngModel)]="n" name="choix">
+    <option *ngFor="let g of galServ.images; let i=index" [value]="i">{{g.title}}</option>
+  </select>
+  <article>
+    <img [src]="image.src" alt="image.alt" title="image.title" />
+    <legend>{{ image.legende }}</legend>
+  </article>
+  <form (submit)="go()">
+    <input name="titre" [(ngModel)]="image.src" placeholder="Source de l'image">
+    <input name="alt" [(ngModel)]="image.alt" placeholder="Texte alternatif de l'image">
+    <input name="title" [(ngModel)]="image.title" placeholder="Titre de l'image">
+    <input name="legende" [(ngModel)]="image.legende" placeholder="Légende de l'image">
+    <input type="submit" value="GO">
+  </form>
+</section>
