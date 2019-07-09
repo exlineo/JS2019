@@ -1,0 +1,33 @@
+[
+    {
+        "titre":"1, il va faire chaud",
+        "intro":"C'est vrai qu'il a fait chaud mais maintenant il fait lourd",
+        "description":"... Que dire de plus ?",
+        "imgIntro":"",
+        "imgDescription":""
+    },{
+        "titre":"2, il va faire chaud",
+        "intro":"J'essaie short et tee-shirt",
+        "description":"Mais il fait quand même super chaud",
+        "imgIntro":"",
+        "imgDescription":""
+    },{
+        "titre":"3, il va faire chaud",
+        "intro":"Avec un ventilateur c'est cool aussi",
+        "description":"Mais quand t'es pas sous le ventilateur, la chaleur continue à monter, monter, après d'exploses. Enfin moi en tout cas, j'en chie au taquet.",
+        "imgIntro":"",
+        "imgDescription":""
+    },{
+        "titre":"4, il va faire chaud",
+        "intro":"Le top c'est la clim'",
+        "description":"Ok, mais tu tombes malade, nananère !",
+        "imgIntro":"",
+        "imgDescription":""
+    },{
+        "titre":"5, il va faire chaud",
+        "intro":"C'est vrai qu'il a fait chaud mais maintenant il fait lourd",
+        "description":"... Que dire de plus ?",
+        "imgIntro":"",
+        "imgDescription":""
+    }
+]
