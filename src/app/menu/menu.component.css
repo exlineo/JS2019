@@ -1,0 +1,13 @@
+ul li{
+    display:inline-block;
+}
+ul li a{
+    padding:6px 12px;
+    margin:0 5px;
+    transition:all .3s ease;
+    background-color:black;
+    color:white;
+}
+ul li a:hover{
+    background-color: red;
+}

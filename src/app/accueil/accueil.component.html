@@ -1,0 +1,9 @@
+<section>
+  <article *ngFor="let a of data.accueilActus">
+    <h3>{{ a.titre }}</h3>
+    <p>
+      <img [src]="a.img"/>
+      {{ a.intro }}
+    </p>
+  </article>
+</section>
