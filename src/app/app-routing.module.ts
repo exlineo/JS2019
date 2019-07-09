@@ -9,6 +9,7 @@ const routes: Routes = [
   {path:'', component:AccueilComponent},
   {path:'actualites', component:ActualitesComponent},
   {path:'galerie', component:GalerieComponent},
+  {path:'edition', loadChildren:"./edition/edition.module#EditionModule"},
   {path:'connexion', component:ConnexionComponent}
 ];
 

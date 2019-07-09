@@ -1,0 +1,8 @@
+section{
+    display:flex;
+    flex-flow:row wrap;
+}
+article{
+    background-color:red;
+    margin:10px;
+}

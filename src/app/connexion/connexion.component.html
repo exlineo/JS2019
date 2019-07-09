@@ -1,3 +1,11 @@
-<p>
-  connexion works!
-</p>
+<section>
+  <form (submit)="envoieForm()">
+    <input name="id" type="text" [(ngModel)]="connexion.id" (input)="traceInput()" minlength="8" #idCtrl="ngModel" required>
+    <span *ngIf="idCtrl.invalid">Merci de saisir au moins huit caractères hexadecimaux</span>
+    <input name="mdp" type="password" [(ngModel)]="connexion.mdp" minlength="6" #mdpCtrl="ngModel" required>
+    <span *ngIf="mdpCtrl.invalid">Merci de saisir au moins six caractères</span>
+    <input type="submit" value="Envoyer">
+    <input type="reset" value="Annuler">
+  </form>
+
+</section>

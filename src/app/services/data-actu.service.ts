@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ActuModele, Actu } from '../modele/actu-modele';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class DataActuService {
   bienvenue:string;
   titre:string;
 
-  accueilActus:Array<object>;
+  accueilActus:Array<ActuModele>;
 
   constructor(private http:HttpClient) {
     this.titre = "Application Angular pour les JS";
@@ -19,7 +20,7 @@ export class DataActuService {
   }
 
   getAccueil(){
-    this.http.get<Array<object>>('assets/data/accueil.json')
+    this.http.get<Array<ActuModele>>('assets/data/accueil.json')
     .subscribe(
       donnees => {
         console.log(donnees);
