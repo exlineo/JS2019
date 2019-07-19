@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,9 @@ import { ConnexionComponent } from './connexion/connexion.component';
 
 import { DataActuService } from './services/data-actu.service';
 import { GalerieService } from './services/galerie.service';
+import { TriactuPipe } from './triactu.pipe';
+import { AuthIntercepteur } from './services/auth.intercepteur';
+import { SecuriteIntercepteur } from './services/securite.intercepteur';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { GalerieService } from './services/galerie.service';
     PiedComponent,
     ActualitesComponent,
     GalerieComponent,
-    ConnexionComponent
+    ConnexionComponent,
+    TriactuPipe
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,7 @@ import { GalerieService } from './services/galerie.service';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [DataActuService, GalerieService],
+  providers: [DataActuService, GalerieService, { provide: HTTP_INTERCEPTORS, useClass:AuthIntercepteur, multi: true }, { provide: HTTP_INTERCEPTORS, useClass:SecuriteIntercepteur, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

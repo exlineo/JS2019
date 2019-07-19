@@ -8,9 +8,16 @@ import { DataActuService } from '../services/data-actu.service';
 })
 export class AccueilComponent implements OnInit {
 
+  debutPagination:number = 0;
+  ecartPagination:number = 4;
+
   constructor(public data:DataActuService) { }
 
   ngOnInit() {
+  }
+
+  pagination(np:number){
+    this.debutPagination += np;
   }
 
 }

@@ -1,3 +1,11 @@
-<p>
-  actualites works!
-</p>
+<section>
+  <input [(ngModel)]="filtrage" name="f">
+    <article *ngFor="let actu of data.accueilActus | triactu:filtrage">
+      <h3>{{ actu.titre }}</h3>
+      <p>{{ actu.intro }}</p>
+      <hr>
+      <!-- <p *ngFor="let d of actu | keyvalue">
+        {{ d.key }} : {{ d.value }}
+      </p> -->
+    </article>
+  </section>

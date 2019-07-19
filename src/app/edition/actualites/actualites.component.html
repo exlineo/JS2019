@@ -1,3 +1,25 @@
-<p>
-  actualites works!
-</p>
+<section>
+  
+  <select [(ngModel)]="n">
+    <option>Sélectionnez une actualité</option>
+    <option *ngFor="let a of dataServ.accueilActus; let i=index" [value]="i">{{ a.titre }}</option>
+  </select>
+
+  <form *ngIf="n">
+    <label for="titre">Titre</label>
+    <input name="titre" [(ngModel)]="dataServ.accueilActus[n].titre" required placeholder="Titre de l'actualité">
+
+    <label for="intro">Titre</label>
+    <input name="intro" [(ngModel)]="dataServ.accueilActus[n].intro" required placeholder="Titre de l'actualité">
+
+    <label for="description">Titre</label>
+    <textarea name="description" [(ngModel)]="dataServ.accueilActus[n].description" required placeholder="Titre de l'actualité"></textarea>
+
+    <label for="imgIntro">Titre</label>
+    <input name="imgIntro" [(ngModel)]="dataServ.accueilActus[n].imgIntro" placeholder="Titre de l'actualité">
+
+    <label for="imgDescription">Titre</label>
+    <input name="imgDescription" [(ngModel)]="dataServ.accueilActus[n].imgDescription" placeholder="Titre de l'actualité">
+
+  </form>
+</section>

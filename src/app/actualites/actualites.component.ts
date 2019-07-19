@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataActuService } from '../services/data-actu.service';
 
 @Component({
   selector: 'app-actualites',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActualitesComponent implements OnInit {
 
-  constructor() { }
+  filtrage:string;
+
+  constructor(public data:DataActuService) { }
 
   ngOnInit() {
   }

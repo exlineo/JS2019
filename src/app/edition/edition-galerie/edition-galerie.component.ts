@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GalerieService } from 'src/app/services/galerie.service';
 import { GalerieModele, Image } from 'src/app/modele/galerie-modele';
-import { timingSafeEqual } from 'crypto';
 
 @Component({
   selector: 'app-edition-galerie',

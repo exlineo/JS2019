@@ -1,9 +1,11 @@
 <section>
-  <article *ngFor="let a of data.accueilActus">
-    <h3>{{ a.titre }}</h3>
+  <article *ngFor="let a of data.accueilActus | slice:debutPagination:debutPagination+ecartPagination">
+    <h3>{{ a.titre | uppercase}}</h3>
     <p>
-      <img [src]="a.img"/>
+      <img [src]="a.imgIntro"/>
       {{ a.intro }}
     </p>
   </article>
 </section>
+<button (click)="pagination(-3)">s</button>
+<button (click)="pagination(3)">d</button>

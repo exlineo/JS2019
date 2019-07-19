@@ -8,7 +8,8 @@ const routes: Routes = [
   {path:'', component:AccueilComponent, children:[
     {path:'galerie', component:EditionGalerieComponent},
     {path:'actualites', component:ActualitesComponent}
-  ]}
+  ]},
+  {path:'actualites', component:AccueilComponent}
 ];
 
 @NgModule({

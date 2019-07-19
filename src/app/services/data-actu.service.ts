@@ -18,7 +18,9 @@ export class DataActuService {
 
     this.getAccueil();
   }
-
+  /**
+   * Récupération des actualités from the serveur
+   */
   getAccueil(){
     this.http.get<Array<ActuModele>>('assets/data/accueil.json')
     .subscribe(
@@ -27,5 +29,18 @@ export class DataActuService {
         this.accueilActus = donnees;
       }
     );
+  }
+
+  /**
+   * 
+   * @param t Titre de l'actualité que nous recherchons
+   */
+  getActu(t):ActuModele {
+    for(let joceline of this.accueilActus){
+      if(joceline.titre && joceline.titre == t){
+        return joceline;
+      }
+    }
+    return null;
   }
 }

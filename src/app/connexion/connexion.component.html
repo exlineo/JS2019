@@ -1,5 +1,5 @@
 <section>
-  <form (submit)="envoieForm()">
+  <form (submit)="envoieForm()" *ngIf="!auth.authentifie">
     <input name="id" type="text" [(ngModel)]="connexion.id" (input)="traceInput()" minlength="8" #idCtrl="ngModel" required>
     <span *ngIf="idCtrl.invalid">Merci de saisir au moins huit caractères hexadecimaux</span>
     <input name="mdp" type="password" [(ngModel)]="connexion.mdp" minlength="6" #mdpCtrl="ngModel" required>
@@ -7,5 +7,5 @@
     <input type="submit" value="Envoyer">
     <input type="reset" value="Annuler">
   </form>
-
+  <button *ngIf="auth.authentifie" (click)="deconne()">Se déconnecter</button>
 </section>
