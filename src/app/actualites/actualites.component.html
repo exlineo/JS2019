@@ -1,6 +1,7 @@
 <section>
   <input [(ngModel)]="filtrage" name="f">
     <article *ngFor="let actu of data.accueilActus | triactu:filtrage">
+      <img [src]="adr_rest+actu.img.url" />
       <h3>{{ actu.titre }}</h3>
       <p>{{ actu.intro }}</p>
       <hr>

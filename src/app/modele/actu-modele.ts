@@ -1,3 +1,5 @@
+import { Auteur } from './auteur';
+
 export interface ActuModele {
     _id?:string | number;
     titre:string;
@@ -5,6 +7,7 @@ export interface ActuModele {
     description:string;
     imgIntro?:string;
     imgDescription?:string;
+    auteur?:Auteur;
 }
 
 export class Actu implements ActuModele{

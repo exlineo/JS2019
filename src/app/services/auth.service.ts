@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class AuthService {
 
   authentifie:boolean;
+  token:string;
 
   constructor() {
     this.authentifie = false;

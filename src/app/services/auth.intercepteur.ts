@@ -3,7 +3,6 @@ import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpHeaders } fro
 import { Observable, pipe } from 'rxjs';
 import { catchError } from "rxjs/internal/operators";
 import { AuthService } from './auth.service';
-import { ConnexionService } from './connexion.service';
 
 @Injectable()
 export class AuthIntercepteur implements HttpInterceptor {
@@ -12,7 +11,7 @@ export class AuthIntercepteur implements HttpInterceptor {
      * Interepteur qui ajouter un token d'identification à chaque requête HTTP sortante
      * L'intercepteur clone un requête, transforme la requête clonée et l'envoie
      */
-    constructor(public securite: ConnexionService) { }
+    constructor(public securite:AuthService) { }
     /**
      * Récupérer les requêtes, les cloner et ajouter l'authentification si elle existe
      * @param req La requête interceptée

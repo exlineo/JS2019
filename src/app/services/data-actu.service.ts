@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActuModele, Actu } from '../modele/actu-modele';
+import { environment } from '../../environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +24,8 @@ export class DataActuService {
    * Récupération des actualités from the serveur
    */
   getAccueil(){
-    this.http.get<Array<ActuModele>>('assets/data/accueil.json')
+    // this.http.get<Array<ActuModele>>('assets/data/accueil.json')
+    this.http.get<Array<ActuModele>>(environment.ADR_REST+'/nouvelles')
     .subscribe(
       donnees => {
         console.log(donnees);
